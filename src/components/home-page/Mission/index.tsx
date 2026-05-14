@@ -1,50 +1,66 @@
 import React from 'react'
 
-const index = () => {
+const Mission = () => {
   return (
-    <div id="mission" className="py-[52px]">
-      <div className="w-[90%] mx-auto py-[27px] mb-[60px] max-w-[1280px]">
-        <h1
-          className="font-[400] text-[40px] lg:text-[48px] leading-[100%] tracking-[0] text-center w-full lg:w-[906px] mx-auto mb-[50px]"
-          id="faustina-font"
-        >
-          Free For Charity has a simple mission with broad implications
-        </h1>
-        <p
-          className="font-[700] text-[25px] leading-[150%] tracking-[0] text-center mb-[30px]"
-          id="lato-font"
-        >
-          Reduce costs and increase revenues for nonprofits; putting that money back into their
-          charitable mission where it belongs.
-        </p>
-        <p
-          className="font-[500] text-[25px] leading-[150%] tracking-[0] text-center"
-          id="lato-font"
-        >
-          This charity for charities seeks to replace as many functions as possible that current
-          nonprofits pay for to for-profit companies with free or at cost work from our campus, on
-          site projects, or partnerships with other entities.
-        </p>
-        <div className="mt-[50px] flex justify-center">
-          <video
-            className="w-full max-w-[800px] rounded-lg shadow-lg"
-            controls
-            playsInline
-            preload="metadata"
-            poster="/videos/mission-video-poster.webp"
-            aria-label="Free For Charity mission video"
-            title="Learn about Free For Charity's mission to help nonprofits reduce costs"
-          >
-            {/* <source src="/videos/mission-video.mp4" type="video/mp4" /> */}
-            <source src="https://ffcsites.org/videos/mission-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+    <section id="mission" className="bg-[#f7f4ee] py-[80px]">
+      <div className="mx-auto w-[90%] max-w-[1080px]">
+        <div className="mb-12 text-center">
+          <p className="font-lato mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#4a7c3a]">
+            Our Mission
+          </p>
+          <h2 className="font-faustina mx-auto max-w-[820px] text-[34px] font-[400] leading-[120%] text-[#2d3a26] sm:text-[42px] lg:text-[48px]">
+            A model for sustainable, cooperative desert life.
+          </h2>
         </div>
-      </div>
 
-      <div className="w-[95%] mt-[50px] mx-auto border border-[#2B627B]"></div>
-    </div>
+        <div className="font-lato mx-auto max-w-[820px] space-y-6 text-[19px] leading-[170%] text-[#3a4a32] lg:text-[20px]">
+          <p>
+            We understand how many people find it difficult to live sustainably and responsibly
+            within modern US culture. The Fallout Shelter Ecovillage exists to build a healthy
+            alternative — and to share what we learn.
+          </p>
+          <p>
+            Members follow ecological covenants and sustainability guidelines as we pursue
+            environmentally sound practices. We welcome individuals, families, and income-sharing
+            communities, and encourage co-housing and cooperatives that promote economic diversity
+            and simple living.
+          </p>
+          <p>
+            Rather than isolating ourselves, we work as a model for social change — actively sharing
+            discoveries and ideas of sustainable living with people across many different
+            lifestyles.
+          </p>
+        </div>
+
+        <ul className="mt-16 grid gap-6 sm:grid-cols-3">
+          {[
+            {
+              title: 'Ecological Covenants',
+              body: 'Shared guidelines that keep the land and our practices in balance.',
+            },
+            {
+              title: 'Cooperative Living',
+              body: 'Co-housing, work exchange, and income sharing as paths to simpler living.',
+            },
+            {
+              title: 'Open Knowledge',
+              body: 'We share what works — and what does not — with visitors and the wider world.',
+            },
+          ].map((card) => (
+            <li
+              key={card.title}
+              className="rounded-2xl border border-[#cbb999] bg-white/70 px-6 py-7 shadow-sm backdrop-blur-sm"
+            >
+              <h3 className="font-faustina mb-3 text-[22px] font-[500] text-[#3f6b34]">
+                {card.title}
+              </h3>
+              <p className="font-lato text-[16px] leading-[160%] text-[#3a4a32]">{card.body}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   )
 }
 
-export default index
+export default Mission

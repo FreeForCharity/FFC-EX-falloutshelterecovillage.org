@@ -79,6 +79,22 @@ body {
   font-family: var(--font-faustina), serif !important;
 }
 
+/*
+ * Class-based font helpers (preferred over id selectors above).
+ * The id-based selectors are kept for backward compatibility with template
+ * components. New components should use these class helpers to avoid
+ * duplicate-id warnings.
+ */
+.font-lato {
+  font-family: var(--font-lato), sans-serif !important;
+}
+.font-faustina {
+  font-family: var(--font-faustina), serif !important;
+}
+.font-aria {
+  font-family: var(--font-open-sans), sans-serif !important;
+}
+
 /* Screen reader only utility class for accessibility */
 .sr-only {
   position: absolute;

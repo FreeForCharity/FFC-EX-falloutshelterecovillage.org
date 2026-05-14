@@ -28,9 +28,8 @@ describe('Footer component', () => {
     expect(screen.getByText('Contact Us')).toBeInTheDocument()
   })
 
-  it('should have social media links', () => {
+  it('should have navigation links', () => {
     render(<Footer />)
-    // Check for social media links by their aria-labels or visible text
     const links = screen.getAllByRole('link')
     expect(links.length).toBeGreaterThan(0)
   })
@@ -41,15 +40,8 @@ describe('Footer component', () => {
     expect(screen.getByText(new RegExp(currentYear.toString()))).toBeInTheDocument()
   })
 
-  it('should have GuideStar profile link', () => {
-    render(<Footer />)
-    const guidestarLink = screen.getByText(/GuideStar Profile/i)
-    expect(guidestarLink).toBeInTheDocument()
-  })
-
   it('should have email contact link', () => {
     render(<Footer />)
-    // Look for email link
     const links = screen.getAllByRole('link')
     const emailLink = links.find((link) => link.getAttribute('href')?.includes('mailto:'))
     expect(emailLink).toBeDefined()

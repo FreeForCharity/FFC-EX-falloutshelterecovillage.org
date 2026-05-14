@@ -1,53 +1,75 @@
 import React from 'react'
+import { upcoming, recurring } from '@/data/events'
 
 const Events = () => {
   return (
-    <div id="events" className="py-[52px]">
-      <div className="w-[90%] mx-auto max-w-[1280px]">
-        <h1
-          className="font-[400] text-[40px] lg:text-[48px] leading-[100%] tracking-[0] text-center mx-auto mb-[50px]"
-          id="faustina-font"
-        >
-          Upcoming Events
-        </h1>
-
-        <div className="text-center mb-8">
-          <p className="text-[20px] lg:text-[25px] font-[500]" id="lato-font">
-            Join us for upcoming volunteer opportunities, training sessions, and community events.
+    <section id="events" className="bg-[#f7f4ee] py-[80px]">
+      <div className="mx-auto w-[90%] max-w-[1080px]">
+        <div className="mb-12 text-center">
+          <p className="font-lato mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#4a7c3a]">
+            Community Life
           </p>
+          <h2 className="font-faustina text-[34px] font-[400] leading-[120%] text-[#2d3a26] sm:text-[42px] lg:text-[48px]">
+            Events &amp; Gatherings
+          </h2>
         </div>
 
-        {/* SociableKit Facebook Events Widget */}
-        <div className="flex justify-center">
-          <iframe
-            src="https://widgets.sociablekit.com/facebook-page-events/iframe/25631700"
-            frameBorder={0}
-            width="100%"
-            height="1000"
-            style={{ maxWidth: '1200px' }}
-            title="Facebook Events"
-            loading="lazy"
-            className="rounded-lg"
-            sandbox="allow-scripts allow-same-origin"
-          ></iframe>
-        </div>
+        <div className="grid gap-8 md:grid-cols-2">
+          <div>
+            <h3 className="font-faustina mb-4 text-[22px] font-[500] text-[#3f6b34]">
+              Upcoming events
+            </h3>
+            {upcoming.length === 0 ? (
+              <div className="rounded-2xl border border-dashed border-[#cbb999] bg-white/60 p-6 text-center">
+                <p className="font-lato text-[16px] leading-[170%] text-[#3a4a32]">
+                  No scheduled events at the moment. Check back soon, or reach out about visiting
+                  during our regular community life.
+                </p>
+              </div>
+            ) : (
+              <ul className="space-y-4">
+                {upcoming.map((e) => (
+                  <li
+                    key={`${e.title}-${e.date}`}
+                    className="rounded-2xl border border-[#dcd2c0] bg-white p-5"
+                  >
+                    <p className="font-lato text-sm font-semibold uppercase tracking-wider text-[#b85c38]">
+                      {e.date}
+                    </p>
+                    <h4 className="font-faustina mt-1 text-[20px] font-[500] text-[#2d3a26]">
+                      {e.title}
+                    </h4>
+                    <p className="font-lato mt-1 text-[14px] text-[#3a4a32]">{e.location}</p>
+                    <p className="font-lato mt-2 text-[15px] leading-[160%] text-[#3a4a32]">
+                      {e.description}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
 
-        <div className="text-center mt-8">
-          <p className="text-[18px] font-[400] text-gray-600" id="lato-font">
-            <a
-              href="https://www.facebook.com/freeforcharity"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#2EA3F2] hover:underline"
-            >
-              View all events on Facebook
-            </a>
-          </p>
+          <div>
+            <h3 className="font-faustina mb-4 text-[22px] font-[500] text-[#3f6b34]">
+              Recurring gatherings
+            </h3>
+            <ul className="space-y-4">
+              {recurring.map((e) => (
+                <li key={e.title} className="rounded-2xl border border-[#dcd2c0] bg-white p-5">
+                  <h4 className="font-faustina text-[20px] font-[500] text-[#2d3a26]">{e.title}</h4>
+                  <p className="font-lato mt-1 text-[14px] text-[#3a4a32]">
+                    {e.cadence} &middot; {e.location}
+                  </p>
+                  <p className="font-lato mt-2 text-[15px] leading-[160%] text-[#3a4a32]">
+                    {e.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-
-      <div className="w-[95%] mt-[50px] mx-auto border border-[#2B627B]"></div>
-    </div>
+    </section>
   )
 }
 

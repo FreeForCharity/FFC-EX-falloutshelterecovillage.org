@@ -1,82 +1,56 @@
 import React from 'react'
-import Image from 'next/image'
 
-const CharityHeroBackground = () => {
+const Hero = () => {
   return (
-    <div id="hero" className="relative w-full pb-[100px] overflow-hidden">
-      {/* 1. Base Blue Layer */}
-      <div className="absolute inset-0 bg-[#2E6F8E]" />
-      {/* 2. ULTRA-THIN White Diagonal Strip - HALF HEIGHT */}
+    <section
+      id="hero"
+      className="relative w-full overflow-hidden bg-gradient-to-br from-[#3f6b34] via-[#4a7c3a] to-[#2d4f24] pt-[140px] pb-[100px]"
+    >
+      {/* Subtle desert-textured overlay using SVG noise */}
       <div
-        className="absolute inset-0 bg-white"
+        aria-hidden="true"
+        className="absolute inset-0 opacity-20 mix-blend-overlay"
         style={{
-          clipPath: 'polygon(0% 108%, 100% 32%, 100% 35%, 0% 111%)',
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E\")",
         }}
       />
-
-      {/* 3. Orange Bottom-Right Section - Starts exactly where white ends */}
+      {/* Sun-bleached horizon band */}
       <div
-        className="absolute inset-0 bg-[#F57C20]"
-        style={{
-          clipPath: 'polygon(0% 111%, 100% 35%, 100% 100%, 0% 100%)',
-        }}
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#c9a87c]/40 to-transparent"
       />
 
-      <div className="hero-container flex flex-col lg:flex-row gap-[40px] lg:gap-[0px] items-center justify-between relative z-10 text-white pt-[130px] w-[90%] mx-auto max-w-[1280px] lg:px-[20px]">
-        <div className="w-full lg:w-[565px]">
-          <h1
-            className="text-[50px] lg:text-[60px] font-[500] text-[#FFFFFF] leading-[120%] mb-[20px]"
-            id="faustina-font"
-          >
-            Welcome to <br /> Free For Charity
-          </h1>
-          <p
-            className="text-[24px] font-[400] leading-[120%] text-[#FFFFFF] mb-[20px]"
-            id="lato-font"
-          >
-            Connecting Students, Professionals, & Businesses with Charities in Need
-          </p>
+      <div className="relative z-10 mx-auto w-[90%] max-w-[1080px] text-center text-white">
+        <p className="font-lato mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#e6d6b1]">
+          Slab City, California
+        </p>
+        <h1 className="font-faustina mb-6 text-[42px] font-[500] leading-[110%] sm:text-[54px] lg:text-[64px]">
+          Welcome to the
+          <br />
+          Fallout Shelter Ecovillage
+        </h1>
+        <p className="font-lato mx-auto mb-10 max-w-[720px] text-[20px] font-[400] leading-[150%] text-white/90 lg:text-[24px]">
+          A desert intentional community modeling sustainable living, ecological covenants, and
+          cooperative life. Visitors, learners, and new members welcome — by arrangement.
+        </p>
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="#volunteer"
-            className="top-[378px] w-[300px] lg:w-[351px] h-[54px] opacity-100 rounded-[27px] px-[32px] py-[18px] flex items-center justify-center gap-[10px] bg-[#FFFFFF] text-[#113563] text-[20px] font-[400] leading-[100%] mb-[10px] whitespace-nowrap"
-            id="lato-font"
+            href="#visit"
+            className="font-lato inline-flex h-[54px] w-[260px] items-center justify-center rounded-[27px] bg-[#f7f4ee] px-8 text-[18px] font-[500] text-[#2d3a26] shadow-sm transition hover:bg-white"
           >
-            Volunteer
+            Plan a Visit
           </a>
-          <div className="flex gap-[5px]">
-            <a
-              href="#donate"
-              className="top-[442px] w-[130px] lg:w-[173px] h-[54px] opacity-100 rounded-[27px] px-[32px] py-[18px] flex items-center justify-center gap-[10px] bg-[#FFFFFF] text-[#113563] text-[20px] font-[400] leading-[100%] whitespace-nowrap"
-              id="lato-font"
-            >
-              Donate
-            </a>
-            <a
-              href="#programs"
-              className="top-[442px] w-[173px] h-[54px] opacity-100 rounded-[27px] px-[32px] py-[18px] flex items-center justify-center gap-[10px] bg-[#FFFFFF] text-[#113563] text-[20px] font-[400] leading-[100%] whitespace-nowrap"
-              id="lato-font"
-            >
-              Our Programs
-            </a>
-          </div>
-        </div>
-
-        {/* Fixed right side image section */}
-        <div className="relative w-full max-w-[445px] aspect-square bg-white rounded-full p-12 flex items-center justify-center">
-          <div className="relative w-full h-full">
-            <Image
-              src="/Images/figma-hero-img.webp"
-              alt="Hero image"
-              fill
-              className="object-contain"
-              priority
-              sizes="(max-width: 1024px) 100vw, 445px"
-            />
-          </div>
+          <a
+            href="#donate"
+            className="font-lato inline-flex h-[54px] w-[260px] items-center justify-center rounded-[27px] border-2 border-white/80 px-8 text-[18px] font-[500] text-white transition hover:bg-white/10"
+          >
+            Support FoSE
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default CharityHeroBackground
+export default Hero
