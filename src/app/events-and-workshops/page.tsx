@@ -25,15 +25,39 @@ export default function EventsAndWorkshops() {
             on the calendar.
           </p>
 
-          <h2 className="font-faustina mt-8 mb-2 text-[28px] text-[#3f6b34]">Upcoming</h2>
+          <h2 className="font-faustina mt-8 mb-4 text-[28px] text-[#3f6b34]">Upcoming</h2>
           {upcoming.length === 0 ? (
-            <p>
-              No scheduled events at the moment. Check back soon, or{' '}
-              <a className="underline" href="/contact-us">
-                get in touch
-              </a>{' '}
-              to ask about visiting during regular community life.
-            </p>
+            <div className="rounded-xl border border-dashed border-[#c8bfa8] bg-white/60 px-7 py-9 text-center">
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.25"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="mx-auto mb-4 h-10 w-10 text-[#8fa882]"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              <p className="font-faustina mb-2 text-[20px] text-[#2d3a26]">
+                No scheduled events right now
+              </p>
+              <p className="text-[15px] leading-[165%] text-[#3a4a32]/80">
+                Events happen as interest and timing allow.{' '}
+                <a
+                  className="text-[#4a7c3a] underline underline-offset-2 hover:no-underline"
+                  href="/contact-us"
+                >
+                  Get in touch
+                </a>{' '}
+                to ask about visiting during regular community life.
+              </p>
+            </div>
           ) : (
             <ul className="space-y-4">
               {upcoming.map((e) => (
