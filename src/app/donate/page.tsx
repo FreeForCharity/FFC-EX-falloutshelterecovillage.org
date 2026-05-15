@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Donate() {
   return (
     <main className="bg-[#f7f4ee] pt-[140px] pb-[80px]">
-      <div className="mx-auto w-[90%] max-w-[820px]">
+      <div className="mx-auto max-w-3xl px-6">
         <p className="font-lato mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#b85c38]">
           Support FoSE
         </p>

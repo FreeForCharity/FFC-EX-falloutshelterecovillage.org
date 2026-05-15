@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function TermsOfService() {
   return (
     <main className="bg-[#f7f4ee] pt-[140px] pb-[80px]">
-      <div className="mx-auto w-[90%] max-w-[820px]">
+      <div className="mx-auto max-w-3xl px-6">
         <h1 className="font-faustina mb-6 text-[40px] font-[400] text-[#2d3a26]">
           Terms of Service
         </h1>

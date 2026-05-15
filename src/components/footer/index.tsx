@@ -22,6 +22,8 @@ const Footer: React.FC = () => {
             A project hosted by{' '}
             <Link
               href="https://freeforcharity.org"
+              target="_blank"
+              rel="noopener noreferrer"
               className="underline decoration-[#c9a87c] underline-offset-2 hover:text-[#c9a87c]"
             >
               Free For Charity
@@ -128,6 +130,8 @@ const Footer: React.FC = () => {
           © {currentYear} Fallout Shelter Ecovillage. A project hosted by{' '}
           <Link
             href="https://freeforcharity.org"
+            target="_blank"
+            rel="noopener noreferrer"
             className="underline decoration-[#c9a87c] underline-offset-2 hover:text-[#c9a87c]"
           >
             Free For Charity
