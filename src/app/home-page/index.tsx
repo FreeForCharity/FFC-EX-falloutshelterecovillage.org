@@ -9,7 +9,7 @@ import Contact from '@/components/home-page/Contact'
 
 const HomePage = () => {
   return (
-    <main>
+    <main id="main">
       <Hero />
       <Mission />
       <Programs />
