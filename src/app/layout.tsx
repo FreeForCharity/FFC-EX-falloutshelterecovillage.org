@@ -60,9 +60,9 @@ export const metadata: Metadata = {
       'An intentional community modeling sustainable, cooperative desert life. Plan a visit or support our work.',
     images: [
       {
-        url: '/web-app-manifest-512x512.png',
-        width: 512,
-        height: 512,
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
         alt: 'Fallout Shelter Ecovillage',
       },
     ],
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: 'Fallout Shelter Ecovillage | Sustainable Desert Living',
     description:
       'An intentional community in Slab City, CA modeling sustainable, cooperative desert life.',
-    images: ['/web-app-manifest-512x512.png'],
+    images: ['/og-image.png'],
   },
   icons: {
     icon: [
