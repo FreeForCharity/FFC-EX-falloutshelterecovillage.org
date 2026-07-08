@@ -27,6 +27,6 @@ export const testConfig = {
    * Used in: tests/google-tag-manager.spec.ts
    */
   googleTagManager: {
-    id: 'GTM-TQ5H8HPR',
+    id: 'GTM-5B5Q6FPD',
   },
 }
