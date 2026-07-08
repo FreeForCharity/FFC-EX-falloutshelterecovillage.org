@@ -14,8 +14,8 @@ export const testConfig = {
     bannerHeading: 'We Value Your Privacy',
     modalHeading: 'Cookie Preferences',
     buttons: {
-      acceptAll: 'Accept All',
-      declineAll: 'Decline All',
+      acceptAll: 'Accept',
+      declineAll: 'Decline',
       customize: 'Customize',
       savePreferences: 'Save Preferences',
       cancel: 'Cancel',
