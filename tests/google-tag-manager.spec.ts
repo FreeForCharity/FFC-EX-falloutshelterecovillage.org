@@ -96,7 +96,7 @@ test.describe('Google Tag Manager Integration', () => {
     await expect(banner).toBeVisible()
 
     // Accept all cookies
-    await page.getByRole('button', { name: 'Accept All' }).click()
+    await page.getByRole('button', { name: 'Accept' }).click()
 
     // Verify dataLayer receives consent update event
     const hasConsentEvent = await page.evaluate(() => {

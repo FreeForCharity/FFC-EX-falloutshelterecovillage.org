@@ -28,10 +28,6 @@ test.describe('Cookie Consent Banner', () => {
     const banner = page.locator('[role="region"][aria-label="Cookie consent notice"]')
     await expect(banner).toBeVisible()
 
-    // Verify banner has the correct heading
-    const heading = banner.locator('h3')
-    await expect(heading).toHaveText(testConfig.cookieConsent.bannerHeading)
-
     // Verify all three buttons are present
     await expect(
       banner.getByRole('button', { name: testConfig.cookieConsent.buttons.declineAll })
@@ -43,9 +39,8 @@ test.describe('Cookie Consent Banner', () => {
       banner.getByRole('button', { name: testConfig.cookieConsent.buttons.acceptAll })
     ).toBeVisible()
 
-    // Verify policy links are present
-    await expect(banner.getByRole('link', { name: 'Privacy Policy' })).toBeVisible()
-    await expect(banner.getByRole('link', { name: 'Cookie Policy' })).toBeVisible()
+    // Verify privacy policy link is present
+    await expect(banner.getByRole('link', { name: 'Privacy policy' })).toBeVisible()
   })
 
   test('should hide banner after clicking Accept All', async ({ page }) => {

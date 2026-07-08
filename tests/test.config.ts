@@ -14,8 +14,8 @@ export const testConfig = {
     bannerHeading: 'We Value Your Privacy',
     modalHeading: 'Cookie Preferences',
     buttons: {
-      acceptAll: 'Accept All',
-      declineAll: 'Decline All',
+      acceptAll: 'Accept',
+      declineAll: 'Decline',
       customize: 'Customize',
       savePreferences: 'Save Preferences',
       cancel: 'Cancel',
@@ -27,6 +27,6 @@ export const testConfig = {
    * Used in: tests/google-tag-manager.spec.ts
    */
   googleTagManager: {
-    id: 'GTM-TQ5H8HPR',
+    id: 'GTM-5B5Q6FPD',
   },
 }

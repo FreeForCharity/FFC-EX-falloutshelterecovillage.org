@@ -6,7 +6,7 @@
 // Next.js client-runtime injection order, and ensures `window.dataLayer`
 // and the script tag are available as soon as the page parses.
 
-const GTM_ID = 'GTM-TQ5H8HPR'
+const GTM_ID = 'GTM-5B5Q6FPD'
 
 const gtmInlineScript = `
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
