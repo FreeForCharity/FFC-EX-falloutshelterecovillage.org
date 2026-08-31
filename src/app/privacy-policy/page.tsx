@@ -37,14 +37,16 @@ export default function PrivacyPolicy() {
             are most useful, governed by Google Consent Mode. In the European Economic Area, the
             United Kingdom, and Switzerland, Google Analytics runs cookie-free until you accept
             through the consent banner — until then only aggregate, cookieless measurement takes
-            place. Everywhere else, including the United States, analytics cookies are set from your
-            first pageview. Which rule applies to your visit is determined by Google from your IP
-            address at the time of your visit; IP geolocation is approximate. You can change your
-            choice at any time via the Cookie Preferences link in the footer — withdrawing consent
-            deletes the analytics cookies this site set. Session-recording analytics (Microsoft
-            Clarity) and marketing tags (Meta Pixel) load only if you explicitly opt in through the
-            consent banner, everywhere in the world. We do not sell or share your data with third
-            parties for marketing.
+            place. (Switzerland is included because Google&apos;s consent defaults cover it; Swiss
+            visitors&apos; data is protected by the Swiss FADP rather than the GDPR.) Everywhere
+            else, including the United States, analytics cookies are set from your first pageview.
+            Which rule applies to your visit is determined by Google from your IP address at the
+            time of your visit; IP geolocation is approximate. You can change your choice at any
+            time via the Cookie Preferences link in the footer — withdrawing consent deletes the
+            analytics cookies this site set. Session-recording analytics (Microsoft Clarity) and
+            marketing tags (Meta Pixel) load only if you explicitly opt in through the consent
+            banner, everywhere in the world. We do not sell or share your data with third parties
+            for marketing.
           </p>
           <h2 className="font-faustina mt-8 mb-2 text-[24px] text-[#3f6b34]">
             Your rights in the European Union, United Kingdom, and EEA (GDPR)
