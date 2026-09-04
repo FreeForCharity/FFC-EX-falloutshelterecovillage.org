@@ -34,19 +34,18 @@ export default function PrivacyPolicy() {
           </h2>
           <p>
             We use Google Analytics (delivered through Google Tag Manager) to understand which pages
-            are most useful, governed by Google Consent Mode. In the European Economic Area, the
-            United Kingdom, and Switzerland, Google Analytics runs cookie-free until you accept
-            through the consent banner — until then only aggregate, cookieless measurement takes
-            place. (Switzerland is included because Google&apos;s consent defaults cover it; the
-            data of visitors in Switzerland is protected by Switzerland&apos;s Federal Act on Data
-            Protection (FADP) rather than the GDPR.) Everywhere else, including the United States,
-            analytics cookies are set from your first pageview. Which rule applies to your visit is
-            determined by Google from your IP address at the time of your visit; IP geolocation is
-            approximate. You can change your choice at any time via the Cookie Preferences link in
-            the footer — withdrawing consent deletes the analytics cookies this site set.
-            Session-recording analytics (Microsoft Clarity) and marketing tags (Meta Pixel) load
-            only if you explicitly opt in through the consent banner, everywhere in the world. We do
-            not sell or share your data with third parties for marketing.
+            are most useful, governed by Google Consent Mode. Google Analytics runs cookie-free
+            until you accept through the consent banner, wherever in the world you are — until then
+            only aggregate, cookieless measurement takes place. (Switzerland is included because
+            Google&apos;s consent defaults cover it; the data of visitors in Switzerland is
+            protected by Switzerland&apos;s Federal Act on Data Protection (FADP) rather than the
+            GDPR.) There is no country in which analytics cookies are set before you choose. The
+            same rule applies to every visitor, so nothing depends on where you are. You can change
+            your choice at any time via the Cookie Preferences link in the footer — withdrawing
+            consent deletes the analytics cookies this site set. Session-recording analytics
+            (Microsoft Clarity) and marketing tags (Meta Pixel) load only if you explicitly opt in
+            through the consent banner, everywhere in the world. We do not sell or share your data
+            with third parties for marketing.
           </p>
           <h2 className="font-faustina mt-8 mb-2 text-[24px] text-[#3f6b34]">
             Your rights in the European Union, United Kingdom, and EEA (GDPR)
