@@ -66,9 +66,12 @@ test.describe('Google Tag Manager Integration', () => {
   test('should load GTM script after page interaction', async ({ page }) => {
     await page.goto('/')
 
-    // Verify GTM script exists on the page
-    // Note: Next.js Script component with lazyOnload strategy
-    // defers script loading until after page is interactive
+    // Verify GTM script exists on the page. This repo renders the GTM
+    // bootstrap as a plain inline `<script id="gtm-script">` rather than
+    // through next/script, so the element and window.dataLayer are present
+    // as soon as the exported HTML parses — there is nothing to wait for
+    // here. See src/components/google-tag-manager/index.tsx, which says so
+    // and gives testability as the reason for the choice.
     const gtmScript = await page.evaluate(() => {
       const script = document.querySelector('script[id="gtm-script"]')
       return script !== null
@@ -76,7 +79,8 @@ test.describe('Google Tag Manager Integration', () => {
 
     expect(gtmScript).toBe(true)
 
-    // Verify dataLayer is initialized (may be delayed with lazyOnload)
+    // Verify dataLayer is initialized (set synchronously by the inline
+    // snippet above, so it is already there)
     const dataLayerInitialized = await page.evaluate(() => {
       return typeof window.dataLayer !== 'undefined'
     })
